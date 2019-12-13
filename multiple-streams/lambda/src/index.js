@@ -503,7 +503,7 @@ const controller = {
     if (handlerInput.requestEnvelope.context
       && handlerInput.requestEnvelope.context.AudioPlayer 
       && handlerInput.requestEnvelope.context.AudioPlayer.playerActivity === "PLAYING"
-      && handlerInput.requestEnvelope.context.AudioPlayer.token === token) {
+      && handlerInput.requestEnvelope.context.AudioPlayer.token == token) {
       return handlerInput.responseBuilder
         .addAudioPlayerStopDirective()
         .getResponse();
